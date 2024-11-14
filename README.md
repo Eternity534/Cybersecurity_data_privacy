@@ -11,3 +11,4 @@ You can also find below the Logbook.
 - 09.11.2024, 2h, CISCO Introduction to cybersecurity module 2, 3 -> done
 - 10.11.2024, 1h30, CISCO Introduction to cybersecurity module 4, 5 -> done
 - 10.11.2024, 1h, CISCO Introduction to cybersecurity final exam -> done
+- 11.11.2024, 2h, Class 16:00-18:00 -> done
