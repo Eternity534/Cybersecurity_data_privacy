@@ -12,3 +12,4 @@ You can also find below the Logbook.
 - 10.11.2024, 1h30, CISCO Introduction to cybersecurity module 4, 5 -> done
 - 10.11.2024, 1h, CISCO Introduction to cybersecurity final exam -> done
 - 11.11.2024, 2h, Class 16:00-18:00 -> done
+- 15.11.2024, 30min, Lab: SQL injection vulnerability in WHERE clause allowing retrieval of hidden data and SQL Injection course -> done
