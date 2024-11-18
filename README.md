@@ -16,3 +16,4 @@ You can also find below the Logbook.
 - 17.11.2024, 1h, fixing problems with git commit and push for the new booking project -> done
 - 18.11.2024, 1h, The booking project phase 1, step 1 -> done
 - 18.11.2024, 2h, Class 16:00-18:00 -> done
+- 18.11.2024, 1h, The booking project phase 1, step 2 -> done
