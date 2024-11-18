@@ -14,3 +14,4 @@ You can also find below the Logbook.
 - 11.11.2024, 2h, Class 16:00-18:00 -> done
 - 15.11.2024, 2h30, Lab: SQL injection vulnerability in WHERE clause allowing retrieval of hidden data, Lab: Username enumeration via different responses and Lab: Unprotected admin functionality -> done
 - 17.11.2024, 1h, fixing problems with git commit and push for the new booking project -> done
+- 18.11.2024, 1h, The booking project phase 1, first part without tests -> done
