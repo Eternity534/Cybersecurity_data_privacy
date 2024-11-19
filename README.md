@@ -17,3 +17,8 @@ You can also find below the Logbook.
 - 18.11.2024, 1h, The booking project phase 1, step 1 -> done
 - 18.11.2024, 2h, Class 16:00-18:00 -> done
 - 18.11.2024, 1h, The booking project phase 1, step 2 -> done
+- 19.11.2024, 1h30, The booking project phase 1, step 3 -> almost done
+    Precision for step 3 (cycle):
+        - https://github.com/Eternity534/Cybersecurity_data_privacy/blob/main/Registration_page_first_test.md
+        - 
+        -
