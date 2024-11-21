@@ -14,14 +14,14 @@ app.post('/register', registerUser);
 Deno.serve(app.fetch);
 */
 import { Hono } from "https://deno.land/x/hono/mod.ts";
-import client from "./db/db.js";
+import client from "./Database/database.js";
 import * as bcrypt from "https://deno.land/x/bcrypt/mod.ts"; // For password hashing
 
 const app = new Hono();
 
 // Serve the registration form
 app.get('/register', async (c) => {
-  return c.html(await Deno.readTextFile('./views/register.html'));
+  return c.html(await Deno.readTextFile('./templates/register.html'));
 });
 
 // Handle user registration (form submission)
