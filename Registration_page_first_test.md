@@ -45,9 +45,9 @@ ZAP by [Checkmarx](https://checkmarx.com/).
 SQL injection may be possible.
 
 * URL: http://localhost:8000/register
-  * Méthode: `POST`
+  * Method: `POST`
   * Parameter: `username`
-  * Attaquer: `ZAP AND 1=1 -- `
+  * Attack: `ZAP AND 1=1 -- `
   * Evidence: ``
   * Other Info: `The page results were successfully manipulated using the boolean conditions [ZAP AND 1=1 -- ] and [ZAP AND 1=2 -- ]
 The parameter value being modified was NOT stripped from the HTML output for the purposes of the comparison.
@@ -114,28 +114,27 @@ Instances: 1
 
 ### Solution
 
-Supposez que toutes les entrées sont malveillantes. Use an "accept known good" input validation strategy, i.e., use an allow list of acceptable inputs that strictly conform to specifications. Rejetez toute entrée ne se conformant pas strictement aux spécifications, ou transformez-la en une valeur qui soit conforme. Do not rely exclusively on looking for malicious or malformed inputs (i.e., do not rely on a deny list). However, deny lists can be useful for detecting potential attacks or determining which inputs are so malformed that they should be rejected outright.
+Assume that all inputs are malicious. Use an "accept known good" input validation strategy, i.e., use an allow list of acceptable inputs that strictly conform to specifications. Reject any input that does not strictly conform to the specifications, or transform it into a value that conforms. Do not rely exclusively on looking for malicious or malformed inputs (i.e., do not rely on a deny list). However, deny lists can be useful for detecting potential attacks or determining which inputs are so malformed that they should be rejected outright.
 
-Lorsque vous effectuez une validation d'entrée, considérez toutes les propriétés potentiellement pertinentes, comme la longueur, le type d'entrée, la gamme complète des valeurs acceptables, les entrées manquantes ou défectueuses, la syntaxe, la cohérence dans des domaines connexes et la conformité aux règles métier. As an example of business rule logic, "boat" may be syntactically valid because it only contains alphanumeric characters, but it is not valid if you are expecting colors such as "red" or "blue."
+When performing input validation, consider all potentially relevant properties, such as length, input type, the full range of acceptable values, missing or defective inputs, syntax, consistency in related fields, and compliance with business rules. As an example of business rule logic, "boat" may be syntactically valid because it only contains alphanumeric characters, but it is not valid if you are expecting colors such as "red" or "blue."
 
-For filenames, use stringent allow lists that limit the character set to be used. Si possible, ne permettez qu'un seul caractère "." dans le nom de fichier pour éviter les failles et excluez les séparateurs de répertoire comme "/". Use an allow list of allowable file extensions.
+For filenames, use stringent allow lists that limit the character set to be used. If possible, allow only one "." character in the filename to avoid exploits and exclude directory separators such as "/". Use an allow list of allowable file extensions.
 
-Avertissement: si vous essayez de nettoyer vos données, faites-le alors de manière à ce que le résultat final ne soit pas sous une forme qui puisse être dangereuse. Un mécanisme d'assainissement peut supprimer des caractères tels que '.' et ';', qui peuvent être nécessaires pour certains exploits. Un agresseur peut essayer de tromper le mécanisme d'assainissement en transformant les données sous une forme dangereuse. Supposons que le pirate injecte un '.' à l'intérieur d'un nom de fichier (par exemple "sensi.tiveFile"), et le mécanisme d'assainissement supprimera le caractère, résultant en un nom de fichier valide, "sensitiveFile". Si les données d'entrée sont maintenant supposées sûres, alors le fichier peut être compromis. 
+Warning: If you attempt to sanitize your data, do so in a way that ensures the final result is not in a form that could be dangerous. A sanitization mechanism might remove characters like '.' and ';', which could be necessary for certain exploits. An attacker could try to trick the sanitization mechanism into transforming the data into a dangerous form. For instance, suppose an attacker injects a '.' within a filename (e.g., "sensi.tiveFile"), and the sanitization mechanism removes the character, resulting in a valid filename, "sensitiveFile." If the input is now assumed to be safe, the file might be compromised.
 
-Les entrées devraient être décodées et rendues canoniques selon la représentation interne actuelle de l'application avant d'en effectuer la validation. Assurez-vous que votre application ne décode pas la même entrée deux fois. Such errors could be used to bypass allow list schemes by introducing dangerous inputs after they have been checked.
+Inputs should be decoded and canonicalized according to the application's current internal representation before validation. Ensure that your application does not decode the same input twice. Such errors could be used to bypass allow list schemes by introducing dangerous inputs after they have been checked.
 
-Utilisez une fonction prédéfinie de canonisation du chemin (par exemple la fonction realpath() en C), qui produit la version canonique du nom de chemin, qui élimine efficacement les séquences ".." et les liens symboliques.
+Use a predefined path canonicalization function (e.g., the realpath() function in C), which produces the canonical version of the pathname, effectively eliminating ".." sequences and symbolic links.
 
-Exécutez votre code à l'aide des droits d'accès les plus réduits possible pour accomplir les tâches nécessaires. Si possible, créez des comptes isolés avec des privilèges limités, qui ne sont utilisés que pour une seule tâche. De cette façon, une attaque réussie ne donnera pas immédiatement accès au reste du logiciel ou de son environnement à l'agresseur. Par exemple, les applications de base de données ne nécessitent que rarement de fonctionner en tant qu'administrateur de base de données, en particulier dans les activités quotidiennes.
+Run your code with the least privileges required to accomplish the necessary tasks. If possible, create isolated accounts with limited privileges that are used for a single task only. This way, a successful attack will not immediately grant the attacker access to the rest of the software or its environment. For example, database applications rarely need to run as a database administrator, especially during everyday activities.
 
-Lorsque l'ensemble des objets admissibles, tels que les noms de fichier ou les URLs, est limité ou connu, créez une correspondance à partir d'un ensemble de valeurs d'entrée fixe (tels que des ID numériques) sur les noms de fichiers réels ou sur les URLs, et rejetez toute autre entrée.
+When the set of allowable objects, such as filenames or URLs, is limited or known, map from a fixed set of input values (such as numeric IDs) to actual filenames or URLs, and reject any other input.
 
-Exécutez votre code dans un "bac à sable" ou un environnement similaire, qui impose des limites strictes entre le processus et le système d'exploitation. Cela peut restreindre efficacement quels fichiers sont accessibles dans un répertoire particulier ou lesquels peuvent être exécutés par votre logiciel.
+Run your code in a "sandbox" or similar environment, which imposes strict boundaries between the process and the operating system. This can effectively restrict which files are accessible within a particular directory or which files can be executed by your software.
 
-Au niveau du système d'exploitation, on peut citer les exemples pour Unix: chroot, AppArmor et SELinux. En général, le code géré (managed code) peut offrir une certaine protection. Par exemple, java.io.FilePermission dans le SecurityManager de Java permet de spécifier des restrictions sur les opérations de fichiers.
+At the operating system level, examples for Unix include chroot, AppArmor, and SELinux. In general, managed code can offer some protection. For example, java.io.FilePermission in Java's SecurityManager allows specifying restrictions on file operations.
 
-Ceci peut ne pas être une solution adéquate. Par ailleurs, elle limite l'impact au seul système d'exploitation; le reste de votre application peut encore faire l'objet de vulnérabilités.
-
+This may not be an adequate solution. Furthermore, it limits the impact to only the operating system; the rest of your application may still be subject to vulnerabilities.
 
 ### Reference
 
@@ -155,16 +154,16 @@ Ceci peut ne pas être une solution adéquate. Par ailleurs, elle limite l'impac
 
 
 
-##### Moyen (Haut)
+##### Medium (High)
 
 ### Description
 
 Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.
 
 * URL: http://localhost:8000/register
-  * Méthode: `GET`
+  * Method: `GET`
   * Parameter: ``
-  * Attaquer: ``
+  * Attack: ``
   * Evidence: ``
   * Other Info: ``
 
@@ -197,16 +196,16 @@ Ensure that your web server, application server, load balancer, etc. is configur
 
 
 
-##### Moyen (Moyen)
+##### Medium (Medium)
 
 ### Description
 
 The response does not include either Content-Security-Policy with 'frame-ancestors' directive or X-Frame-Options to protect against 'ClickJacking' attacks.
 
 * URL: http://localhost:8000/register
-  * Méthode: `GET`
+  * Method: `GET`
   * Parameter: `x-frame-options`
-  * Attaquer: ``
+  * Attack: ``
   * Evidence: ``
   * Other Info: ``
 
@@ -234,16 +233,16 @@ If you expect the page to be framed only by pages on your server (e.g. it's part
 
 
 
-##### Faible (Moyen)
+##### Low (Medium)
 
 ### Description
 
 This page contains an error/warning message that may disclose sensitive information like the location of the file that produced the unhandled exception. This information can be used to launch further attacks against the web application. The alert could be a false positive if the error message is found inside a documentation page.
 
 * URL: http://localhost:8000/register
-  * Méthode: `POST`
+  * Method: `POST`
   * Parameter: ``
-  * Attaquer: ``
+  * Attack: ``
   * Evidence: `HTTP/1.1 500 Internal Server Error`
   * Other Info: ``
 
@@ -268,16 +267,16 @@ Review the source code of this page. Implement custom error pages. Consider impl
 
 
 
-##### Faible (Moyen)
+##### Low (Medium)
 
 ### Description
 
 The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.
 
 * URL: http://localhost:8000/register
-  * Méthode: `GET`
+  * Method: `GET`
   * Parameter: `x-content-type-options`
-  * Attaquer: ``
+  * Attack: ``
   * Evidence: ``
   * Other Info: `This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
 At "High" threshold this scan rule will not alert on client or server error responses.`
@@ -307,62 +306,62 @@ If possible, ensure that the end user uses a standards-compliant and modern web 
 
 
 
-##### Pour information (Moyen)
+##### Informational (Medium)
 
 ### Description
 
 Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the original response.
 
 * URL: http://localhost:8000/register
-  * Méthode: `POST`
+  * Method: `POST`
   * Parameter: `Header User-Agent`
-  * Attaquer: `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)`
+  * Attack: `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)`
   * Evidence: ``
   * Other Info: ``
 * URL: http://localhost:8000/register
-  * Méthode: `POST`
+  * Method: `POST`
   * Parameter: `Header User-Agent`
-  * Attaquer: `Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)`
+  * Attack: `Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)`
   * Evidence: ``
   * Other Info: ``
 * URL: http://localhost:8000/register
-  * Méthode: `POST`
+  * Method: `POST`
   * Parameter: `Header User-Agent`
-  * Attaquer: `Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)`
+  * Attack: `Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)`
   * Evidence: ``
   * Other Info: ``
 * URL: http://localhost:8000/register
-  * Méthode: `POST`
+  * Method: `POST`
   * Parameter: `Header User-Agent`
-  * Attaquer: `Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko`
   * Evidence: ``
   * Other Info: ``
 * URL: http://localhost:8000/register
-  * Méthode: `POST`
+  * Method: `POST`
   * Parameter: `Header User-Agent`
-  * Attaquer: `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0`
   * Evidence: ``
   * Other Info: ``
 * URL: http://localhost:8000/register
-  * Méthode: `POST`
+  * Method: `POST`
   * Parameter: `Header User-Agent`
-  * Attaquer: `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36`
   * Evidence: ``
   * Other Info: ``
 * URL: http://localhost:8000/register
-  * Méthode: `POST`
+  * Method: `POST`
   * Parameter: `Header User-Agent`
-  * Attaquer: `Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0`
+  * Attack: `Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0`
   * Evidence: ``
   * Other Info: ``
 * URL: http://localhost:8000/register
-  * Méthode: `POST`
+  * Method: `POST`
   * Parameter: `Header User-Agent`
-  * Attaquer: `Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)`
+  * Attack: `Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)`
   * Evidence: ``
   * Other Info: ``
 * URL: http://localhost:8000/register
-  * Méthode: `POST`
+  * Method: `POST`
   * Parameter: `Header User-Agent`
   * Attack: `Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)`
   * Evidence: ``
