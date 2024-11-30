@@ -11,12 +11,12 @@ app.use('/static/*', serveStatic({ root: '.' }));
 
 // Serve the index page
 app.get('/', async (c) => {
-    return c.html(await Deno.readTextFile('./views/index.html'));
+    return c.html(await Deno.readTextFile('./templates/index.html'));
 });
 
 // Serve the registration form
 app.get('/register', async (c) => {
-    return c.html(await Deno.readTextFile('./views/register.html'));
+    return c.html(await Deno.readTextFile('./templates/register.html'));
 });
 
 // Route for user registration (POST request)
@@ -24,7 +24,7 @@ app.post('/register', registerUser);
 
 // Serve login page
 app.get('/login', async (c) => {
-    return c.html(await Deno.readTextFile('./views/login.html')); // Use the login.html file
+    return c.html(await Deno.readTextFile('./templates/login.html')); // Use the login.html file
 });
 
 // Handle user login
