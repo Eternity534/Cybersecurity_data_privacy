@@ -23,3 +23,4 @@ Precision for step 3 (cycle):
     - 23.11.2024 : Fixing input errors, SQL injection, Path traversal, Application Error Disclosure, User Agent Fuzzer
     - https://github.com/Eternity534/Cybersecurity_data_privacy/blob/main/Registration_page_second_test.md
 - 25.11.2024, 2h, Class 16:00-18:00 -> done
+- 30.11.2024, 1h, The booking project phase 2, step 1 -> done
