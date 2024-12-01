@@ -1,34 +1,27 @@
 export async function securityHeadersMiddleware(c, next) {
-    // Set the Content Security Policy (CSP) header
-    const cspHeader = `
-        default-src 'self';                  // Restrict everything to the same origin
-        script-src 'self';                  // Allow scripts only from the same origin
-        style-src 'self' 'unsafe-inline';   // Allow styles only from the same origin and inline styles
-        img-src 'self' data:;               // Allow images from the same origin and inline data URIs
-        font-src 'self';                    // Allow fonts only from the same origin
-        connect-src 'self';                 // Restrict connections (e.g., API calls) to the same origin
-        frame-ancestors 'none';             // Disallow embedding the site in iframes (anti-clickjacking)
-    `.replace(/\s+/g, ' ').trim();
+    // Set Content Security Policy (CSP)
+    c.set('Content-Security-Policy', "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; base-uri 'self';");
 
-    c.set('Content-Security-Policy', cspHeader);
+    // Set X-Frame-Options to prevent clickjacking
+    c.set('X-Frame-Options', 'DENY');
 
-    // Set anti-clickjacking header
-    c.set('X-Frame-Options', 'DENY'); // Completely disallow framing of the site
+    // Set X-XSS-Protection to prevent reflected XSS attacks
+    c.set('X-XSS-Protection', '1; mode=block');
 
-    // Additional recommended security headers
-
-    // Prevent MIME type sniffing
+    // Set X-Content-Type-Options to prevent MIME type sniffing
     c.set('X-Content-Type-Options', 'nosniff');
 
-    // Enforce HTTPS with HSTS (HTTP Strict Transport Security)
-    c.set('Strict-Transport-Security', 'max-age=63072000; includeSubDomains; preload');
+    // Set Strict-Transport-Security (HSTS) header for HTTPS only
+    c.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
 
-    // Control referrer information to enhance privacy
-    c.set('Referrer-Policy', 'no-referrer');
+    // Set Referrer-Policy to control what referrer information is sent with requests
+    c.set('Referrer-Policy', 'strict-origin-when-cross-origin');
 
-    // Prevent browsers from loading your site over HTTP (optional for development environments)
-    // Uncomment the following line in production:
-    // c.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains');
+    // Set Permissions-Policy header for controlling which features the browser can access
+    c.set('Permissions-Policy', 'geolocation=(self), microphone=(), camera=()');
 
-    await next(); // Proceed to the next middleware or route handler
+    // Optionally add any custom headers or logging here
+    
+    // Continue with the route handler
+    await next();
 }
