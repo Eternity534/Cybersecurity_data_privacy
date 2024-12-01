@@ -25,3 +25,4 @@ Precision for step 3 (cycle):
 - 25.11.2024, 2h, Class 16:00-18:00 -> done
 - 30.11.2024, 1h, The booking project phase 2, step 1 -> done
 - 30.11.2024, 30min, Update Style for the registration page
+- 01.12.2024, 1h, The booking project phase 2, step 2 -> done
