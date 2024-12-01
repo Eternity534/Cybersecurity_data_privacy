@@ -26,3 +26,8 @@ Precision for step 3 (cycle):
 - 30.11.2024, 1h, The booking project phase 2, step 1 -> done
 - 30.11.2024, 30min, Update Style for the registration page
 - 01.12.2024, 1h, The booking project phase 2, step 2 -> done
+- 01.12.2024, 1h, The booking project phase 2, step 3 -> done
+Precision for step 3 (cycle):
+    - https://github.com/Eternity534/Cybersecurity_data_privacy/blob/main/Phase_2_first_test.md
+    - 01.12.2024 : Fixing CSP, Mixing anti-clickjacking Header
+    - 

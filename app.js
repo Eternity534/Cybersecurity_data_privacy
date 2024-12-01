@@ -1,10 +1,14 @@
-// app.js
+//app.js
 import { Hono } from "https://deno.land/x/hono/mod.ts";
-import { loginUser } from "./routes/login.js"; // Import login logic
-import { registerUser } from "./routes/register.js"; // Import register logic
+import { loginUser } from "./routes/login.js";
+import { registerUser } from "./routes/register.js";
 import { serveStatic } from "https://deno.land/x/hono/middleware.ts";
+import { securityHeadersMiddleware } from "./middlewares/security.js"; // Import the security middleware
 
 const app = new Hono();
+
+// Apply security headers middleware
+app.use('*', securityHeadersMiddleware);
 
 // Serve static files from the /static directory
 app.use('/static/*', serveStatic({ root: '.' }));
@@ -30,8 +34,9 @@ app.get('/login', async (c) => {
 // Handle user login
 app.post('/login', loginUser);
 
-
+// Start the server
 Deno.serve(app.fetch);
+
 
 // Run the app using the command:
 // deno run --allow-net --allow-env --allow-read --watch app.js

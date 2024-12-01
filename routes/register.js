@@ -13,7 +13,7 @@ const registerSchema = z.object({
     role: z.enum(["reserver", "administrator"], { message: "Invalid role" }),
 });
 
-// Check if username already exist
+// Check if username already exists
 async function isUniqueUsername(email) {
     const result = await client.queryArray(`SELECT username FROM zephyr_users WHERE username = $1`, [email]);
     return result.rows.length === 0;
@@ -24,21 +24,28 @@ export async function registerUser(c) {
     const body = await c.req.parseBody();
     const { username, password, birthdate, role } = body;
     try {
+        // Set security headers
+        c.set('X-Frame-Options', 'DENY');
+        c.set('Content-Security-Policy', "default-src 'self'; script-src 'self'; style-src 'self';");
+
         // Validate the input data using Zod
         registerSchema.parse({ username, password, birthdate, role });
+
         // Check if the email is unique
         if (!(await isUniqueUsername(username))) {
             return c.text('Email already in use', 400);
         }
+
         // Hash the user's password
         const salt = await bcrypt.genSalt(10);
         const hashedPassword = await bcrypt.hash(password, salt);
+
         // Insert the new user into the database
-        
         await client.queryArray(
             `INSERT INTO zephyr_users (username, password_hash, role, birthdate) VALUES ($1, $2, $3, $4)`,
             [username, hashedPassword, role, birthdate]
         );
+
         // Success response
         return c.text('User registered successfully!');
     } catch (error) {
