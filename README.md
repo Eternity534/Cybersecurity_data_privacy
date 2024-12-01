@@ -30,4 +30,4 @@ Precision for step 3 (cycle):
 Precision for step 3 (cycle):
     - https://github.com/Eternity534/Cybersecurity_data_privacy/blob/main/Phase_2_first_test.md
     - 01.12.2024 : Fixing CSP, Mixing anti-clickjacking Header
-    - 
+    - https://github.com/Eternity534/Cybersecurity_data_privacy/blob/main/Phase_2_second_test.md
