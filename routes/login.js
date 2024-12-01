@@ -1,4 +1,4 @@
-import client from "../db/db.js";
+import client from "../Database/database.js";
 import * as bcrypt from "https://deno.land/x/bcrypt/mod.ts"; // For password comparison
 import { z } from "https://deno.land/x/zod@v3.16.1/mod.ts"; // For validation
 
