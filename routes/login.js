@@ -1,6 +1,6 @@
-import client from "../Database/database.js";
-import * as bcrypt from "https://deno.land/x/bcrypt/mod.ts";
-import { z } from "https://deno.land/x/zod@v3.16.1/mod.ts";
+import client from "../db/db.js";
+import * as bcrypt from "https://deno.land/x/bcrypt/mod.ts"; // For password comparison
+import { z } from "https://deno.land/x/zod@v3.16.1/mod.ts"; // For validation
 
 // Zod schema for login validation
 const loginSchema = z.object({
@@ -23,10 +23,6 @@ export async function loginUser(c) {
     const { username, password } = body;
 
     try {
-        // Set security headers
-        c.set('X-Frame-Options', 'DENY');
-        c.set('Content-Security-Policy', "default-src 'self'; script-src 'self'; style-src 'self';");
-
         // Validate the input data using Zod
         loginSchema.parse({ username, password });
 
@@ -44,8 +40,13 @@ export async function loginUser(c) {
             return c.text("Invalid email or password", 400);
         }
 
+        // Authentication successful, proceed to create session or token
+        //return c.text(`Welcome back, ${storedUsername}!`);
+
         // Authentication successful, redirect to the index page
         return c.redirect('/');
+
+
     } catch (error) {
         if (error instanceof z.ZodError) {
             // Handle validation errors from Zod
