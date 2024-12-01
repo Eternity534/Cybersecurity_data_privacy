@@ -9,6 +9,29 @@ const app = new Hono();
 // Serve static files from the /static directory
 app.use('/static/*', serveStatic({ root: '.' }));
 
+//Adding Security to the project
+app.use('*', (c, next) => {
+    c.header('Content-Type', 'text/html');
+
+    //CSP
+    c.header('Content-Security-Policy',
+        "default-src 'self'; " +
+        "script-src 'self'; " +
+        "style-src 'self'; " +
+        "img-src 'self'; " +
+        "frame-ancestors 'none'; " +
+        "form-action 'self';"
+    );
+
+    //X-Frame-Options for Clickjacking
+    c.header('X-Frame-Options', 'DENY');
+
+    //X-Content-Type-Options to stop MIME type sniffing
+    c.header('X-Content-Type-Options', 'nosniff');
+
+    return next();
+})
+
 // Serve the index page
 app.get('/', async (c) => {
     return c.html(await Deno.readTextFile('./templates/index.html'));
