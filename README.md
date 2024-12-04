@@ -35,3 +35,5 @@ Precision for fixing the CSP and anti-clickjacking Header alerts :
     First of all I tried to add a new folder for security with middlewares. This should have fix those two alerts but it didn't.
     After trying to fix it with chatgpt and also by watching the videos, I came back to the old system with CSP and anti-clickjacking Header directly in the app.js.
     Now the alerts are fixed.
+- 02.12.2024, 2h, Class 16:00-18:00 -> done
+- 04.12.2024, 1h, Update project with new codes
