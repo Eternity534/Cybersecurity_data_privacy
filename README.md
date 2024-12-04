@@ -37,3 +37,5 @@ Precision for fixing the CSP and anti-clickjacking Header alerts :
     Now the alerts are fixed.
 - 02.12.2024, 2h, Class 16:00-18:00 -> done
 - 04.12.2024, 1h, Update project with new codes
+- 04.12.2024, 30min, The booking project phase 3 -> done
+Report for phase 3 : https://github.com/Eternity534/Cybersecurity_data_privacy/blob/main/test%20report/Phase_3_test.md
