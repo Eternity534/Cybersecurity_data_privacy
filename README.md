@@ -38,8 +38,3 @@ Precision for fixing the CSP and anti-clickjacking Header alerts :
 - 02.12.2024, 2h, Class 16:00-18:00 -> done
 - 04.12.2024, 1h, Update project with new codes
 - 04.12.2024, 30min, The booking project phase 3 -> done
-Report for phase 3 : https://github.com/Eternity534/Cybersecurity_data_privacy/blob/main/test%20report/Phase_3_test.md
-Reflection on phase 3 :
-I found no problem when scanning with ZAP, except an informational alert about the login page but it doesn't matter a lot.
-I have already fixed in the last phases different problems of security like CSP, anti-clickjacking header and SQL Injection. I have also put again the CSP and other security protocol before doing the tests, so this is why I don't have any alerts.
-After testing it also locally, everything is working as intended.
