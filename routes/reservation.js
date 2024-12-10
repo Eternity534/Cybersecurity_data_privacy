@@ -1,5 +1,5 @@
 import { getSession } from "../sessionService.js"; // For sessions
-import client from "../Database/database.js";
+import client from "../db/db.js";
 
 // Get user UUID
 async function getUserUUID(username) {
