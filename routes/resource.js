@@ -1,4 +1,4 @@
-import client from "../db/db.js";
+import client from "../Database/database.js";
 
 export async function getResources(req) {
     const query = `SELECT resource_id, resource_name, resource_description FROM zephyr_resources`;

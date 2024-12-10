@@ -65,7 +65,7 @@ async function handler(req) {
 
     // Route: Registration page
     if (url.pathname === "/register" && req.method === "GET") {
-        return await serveStaticFile("./views/register.html", "text/html");
+        return await serveStaticFile("./templates/register.html", "text/html");
     }
 
     // Route: Handle user registration
@@ -76,7 +76,7 @@ async function handler(req) {
 
     // Route: Login page
     if (url.pathname === "/login" && req.method === "GET") {
-        return await serveStaticFile("./views/login.html", "text/html");
+        return await serveStaticFile("./templates/login.html", "text/html");
     }
 
     // Route: Handle user login
@@ -107,7 +107,7 @@ async function handler(req) {
 
     // Route: Resource page
     if (url.pathname === "/resources" && req.method === "GET") {
-        return await serveStaticFile("./views/resource.html", "text/html");
+        return await serveStaticFile("./templates/resource.html", "text/html");
     }
 
     // Route: Handle resources

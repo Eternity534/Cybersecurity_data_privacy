@@ -1,5 +1,5 @@
 import { getSession } from "../sessionService.js"; // For sessions
-import client from "../db/db.js";
+import client from "../Database/database.js";
 
 async function getReservations() {
     try {
