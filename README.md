@@ -11,6 +11,11 @@ You can also find below the Logbook.
     <td>Tobias</td>
     <td>Linus</td>
   </tr>
+  <tr>
+    <td>16</td>
+    <td>14</td>
+    <td>10</td>
+  </tr>
 </table>
 
 - 30.10.2024, 2h, Kick-Off class
