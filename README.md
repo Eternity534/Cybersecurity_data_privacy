@@ -13,48 +13,54 @@ You can also find below the Logbook.
     WORK
     </td>
     <td>
-    30.10.2024 KickOff Class - 2h
+    30.10.2024 KickOff Class - 2h</br>
+    --------------------</br>
+    31.10.2024 Link to the Git Repo + Logbook - 10min</br>
+    05.11.2024 CISCO Introduction to cybersecurity module 1 - 1h</br>
+    09.11.2024 CISCO Introduction to cybersecurity module 2 and 3 - 2h</br>
+    10.11.2024 CISCO Introduction to cybersecurity module 4 and 5 - 2h</br>
+    10.11.2024 CISCO Introduction to cybersecurity final exam - 1h
     </td>
   </tr>
   <tr>
   <!-- WEEK 2 -->
     <td>WEEK 2</td>
-    <td>CLASS</br></br>
+    <td>CLASS</br>----------</br>
     WORK
     </td>
   </tr>
   <tr>
   <!-- WEEK 3 -->
     <td>WEEK 3</td>
-    <td>CLASS</br></br>
+    <td>CLASS</br>----------</br>
     WORK
     </td>
   </tr>
   <tr>
   <!-- WEEK 4 -->
     <td>WEEK 4</td>
-    <td>CLASS</br></br>
+    <td>CLASS</br>----------</br>
     WORK
     </td>
   </tr>
   <tr>
   <!-- WEEK 5 -->
     <td>WEEK 5</td>
-    <td>CLASS</br></br>
+    <td>CLASS</br>----------</br>
     WORK
     </td>
   </tr>
   <tr>
   <!-- WEEK 6 -->
     <td>WEEK 6</td>
-    <td>CLASS</br></br>
+    <td>CLASS</br>----------</br>
     WORK
     </td>
   </tr>
   <tr>
   <!-- WEEK 7 -->
     <td>WEEK 7</td>
-    <td>CLASS</br></br>
+    <td>CLASS</br>----------</br>
     WORK
     </td>
   </tr>
