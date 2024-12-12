@@ -5,6 +5,23 @@ You can also find below the Logbook.
 
 # Logbook:
 
+<div style="display: flex; flex-direction: column; width: 100%; max-width: 600px; border: 1px solid black; font-family: Arial, sans-serif;">
+  <!-- Ligne "WEEK" -->
+  <div style="flex: 1; display: flex; border-bottom: 1px solid black;">
+    <div style="flex: 1; border-right: 1px solid black; text-align: center; padding: 10px;">WEEK</div>
+  </div>
+  <!-- Ligne "CLASS" et "ACTIVITIES" -->
+  <div style="flex: 1; display: flex; border-bottom: 1px solid black;">
+    <div style="flex: 1; border-right: 1px solid black; text-align: center; padding: 10px;">CLASS</div>
+    <div style="flex: 2; text-align: center; padding: 10px;">ACTIVITIES</div>
+  </div>
+  <!-- Ligne "WORK" et "ACTIVITIES" -->
+  <div style="flex: 1; display: flex;">
+    <div style="flex: 1; border-right: 1px solid black; text-align: center; padding: 10px;">WORK</div>
+    <div style="flex: 2; text-align: center; padding: 10px;">ACTIVITIES</div>
+  </div>
+</div>
+
 - 30.10.2024, 2h, Kick-Off class
 - 31.10.2024, 10min, Link to the Git repo + Logbook -> done
 - 05.11.2024, 1h, CISCO Introduction to cybersecurity module 1 -> done
