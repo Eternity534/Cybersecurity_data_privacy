@@ -9,7 +9,7 @@ You can also find below the Logbook.
   <tr>
   <!-- WEEK 1 -->
     <td>WEEK 1</td>
-    <td>CLASS</br>----------</br>
+    <td>CLASS</br>--------</br>
     WORK
     </td>
     <td>
@@ -25,7 +25,7 @@ You can also find below the Logbook.
   <tr>
   <!-- WEEK 2 -->
     <td>WEEK 2</td>
-    <td>CLASS</br>----------</br>
+    <td>CLASS</br>--------</br>
     WORK
     </td>
     <td>
@@ -39,35 +39,35 @@ You can also find below the Logbook.
   <tr>
   <!-- WEEK 3 -->
     <td>WEEK 3</td>
-    <td>CLASS</br>----------</br>
+    <td>CLASS</br>--------</br>
     WORK
     </td>
   </tr>
   <tr>
   <!-- WEEK 4 -->
     <td>WEEK 4</td>
-    <td>CLASS</br>----------</br>
+    <td>CLASS</br>--------</br>
     WORK
     </td>
   </tr>
   <tr>
   <!-- WEEK 5 -->
     <td>WEEK 5</td>
-    <td>CLASS</br>----------</br>
+    <td>CLASS</br>--------</br>
     WORK
     </td>
   </tr>
   <tr>
   <!-- WEEK 6 -->
     <td>WEEK 6</td>
-    <td>CLASS</br>----------</br>
+    <td>CLASS</br>--------</br>
     WORK
     </td>
   </tr>
   <tr>
   <!-- WEEK 7 -->
     <td>WEEK 7</td>
-    <td>CLASS</br>----------</br>
+    <td>CLASS</br>--------</br>
     WORK
     </td>
   </tr>
