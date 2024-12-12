@@ -13,7 +13,7 @@ You can also find below the Logbook.
     WORK
     </td>
     <td>
-    30.10.2024 KickOff Class - 2h</br></br></br>
+    30.10.2024 KickOff Class - 2h</br>
     --------------------</br>
     31.10.2024 Link to the Git Repo + Logbook - 10min</br>
     05.11.2024 CISCO Introduction to cybersecurity module 1 done - 1h</br>
@@ -43,7 +43,7 @@ You can also find below the Logbook.
     </td>
     <td>
     11.11.2024 Class : Starting the project phase 1 - 2h</br>
-    13.11.2024 Workshop : Security testing, Shielding, Threat detection, Tokenization - 2h</br></br>
+    13.11.2024 Workshop : Security testing, Shielding, Threat detection, Tokenization - 2h</br>
     --------------------</br>
     17.11.2024 Fixing problems with git commit and push for the new booking project - 1h</br>
     18.11.2024 The booking project phase 1 step 1 done - 1h</br>
@@ -59,7 +59,7 @@ You can also find below the Logbook.
     </td>
     <td>
     18.11.2024 Class : The project continues phase 2 - 2h</br>
-    21.11.2024 Workshop : Authentication, Logging, Security testing, Shielding- 2h</br></br>
+    21.11.2024 Workshop : Authentication, Logging, Security testing, Shielding- 2h</br>
     --------------------</br>
     30.11.2024 The booking project phase 2 step 1 done - 1h</br>
     30.11.2024 Update CSS for the registration page</br>
@@ -75,7 +75,7 @@ You can also find below the Logbook.
     </td>
     <td>
     25.11.2024 Class : The project continues phase 3 - 2h</br>
-    26.11.2024 Workshop : Authorization, Logging, Security testing, Shielding, GDPR - 2h</br></br>
+    26.11.2024 Workshop : Authorization, Logging, Security testing, Shielding, GDPR - 2h</br>
     --------------------</br>
     04.12.2024 Update project with new codes - 1h</br>
     04.12.2024 The booking project phase 3 done - 1h</br>
@@ -101,7 +101,7 @@ You can also find below the Logbook.
     WORK
     </td>
     <td>
-    11.12.2024 Class : Finishing the project - 2h</br></br>
+    11.12.2024 Class : Finishing the project - 2h</br>
     --------------------</br>
     12.12.2024 Doing 9 other Portswigger Labs - 2h</br>
     12.12.2024 Updating logbook style - 2h</br>
