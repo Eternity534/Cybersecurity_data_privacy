@@ -12,7 +12,6 @@ You can also find below the Logbook.
     <td>Linus</td>
   </tr>
   <tr>
-    <td>16</td>
     <td>14</td>
     <td>10</td>
   </tr>
