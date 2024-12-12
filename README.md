@@ -28,6 +28,13 @@ You can also find below the Logbook.
     <td>CLASS</br>----------</br>
     WORK
     </td>
+    <td>
+    06.11.2024 Workshop : The Portswigger : A few access control labs - 1h</br>
+    11.11.2024 Class : Playing with AI - 2h</br>
+    13.11.2024 Workshop - 2h</br>
+    --------------------</br>
+    15.11.2024 Lab: SQL injection vulnerability in WHERE clause allowing retrieval of hidden data, Lab: Username enumeration via different responses and Lab: Unprotected admin functionality - 3h</br>
+    </td>
   </tr>
   <tr>
   <!-- WEEK 3 -->
@@ -66,16 +73,6 @@ You can also find below the Logbook.
   </tr>
 </table>
 
-- 30.10.2024, 2h, Kick-Off class
-- 31.10.2024, 10min, Link to the Git repo + Logbook -> done
-- 05.11.2024, 1h, CISCO Introduction to cybersecurity module 1 -> done
-- 06.11.2024, 30min, Workshop 16:00-16:30
-- 09.11.2024, 2h, CISCO Introduction to cybersecurity module 2, 3 -> done
-- 10.11.2024, 1h30, CISCO Introduction to cybersecurity module 4, 5 -> done
-- 10.11.2024, 1h, CISCO Introduction to cybersecurity final exam -> done
-- 11.11.2024, 2h, Class 16:00-18:00
-- 13.11.2024, 1h30, Workshop 16:00-17:30
-- 15.11.2024, 2h30, Lab: SQL injection vulnerability in WHERE clause allowing retrieval of hidden data, Lab: Username enumeration via different responses and Lab: Unprotected admin functionality -> done
 - 17.11.2024, 1h, fixing problems with git commit and push for the new booking project -> done
 - 18.11.2024, 1h, The booking project phase 1, step 1 -> done
 - 18.11.2024, 2h, Class 16:00-18:00
