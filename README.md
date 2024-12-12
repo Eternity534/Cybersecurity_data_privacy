@@ -5,21 +5,13 @@ You can also find below the Logbook.
 
 # Logbook:
 
-<div style="display: flex; width: 100%; max-width: 800px; border: 1px solid black; font-family: Arial, sans-serif;">
-  <!-- WEEK -->
-  <div style="flex: 1; border-right: 1px solid black; text-align: center; padding: 20px;">WEEK
-    <!-- WORK -->
-    <div style="flex: 1; border-right: 1px solid black; text-align: center; padding: 20px;">WORK
-    <!-- ACTIVITIES -->
-        <div style="flex: 3; text-align: center; padding: 20px;">ACTIVITIES</div>
-    </div>
-    <!-- CLASS -->
-    <div style="flex: 2; border-right: 1px solid black; text-align: center; padding: 20px;">CLASS
-        <!-- ACTIVITIES -->
-        <div style="flex: 3; text-align: center; padding: 20px;">ACTIVITIES</div>
-    </div>
-  </div>
-</div>
+<table>
+  <tr>
+    <td>Emil</td>
+    <td>Tobias</td>
+    <td>Linus</td>
+  </tr>
+</table>
 
 - 30.10.2024, 2h, Kick-Off class
 - 31.10.2024, 10min, Link to the Git repo + Logbook -> done
