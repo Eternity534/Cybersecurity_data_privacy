@@ -9,7 +9,7 @@ You can also find below the Logbook.
   <tr>
   <!-- WEEK 1 -->
     <td>WEEK 1</td>
-    <td>CLASS</br></br>
+    <td>CLASS</br>----------</br>
     WORK
     </td>
     <td>
