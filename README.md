@@ -7,13 +7,10 @@ You can also find below the Logbook.
 
 <table>
   <tr>
-    <td>Emil</td>
-    <td>Tobias</td>
-    <td>Linus</td>
-  </tr>
-  <tr>
-    <td>14</td>
-    <td>10</td>
+    <td>WEEK 1</td>
+    <td>CLASS</br></br>
+    WORK
+    </td>
   </tr>
 </table>
 
