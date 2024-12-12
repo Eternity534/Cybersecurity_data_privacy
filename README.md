@@ -115,7 +115,7 @@ You can also find below the Logbook.
   <tr>
   <!-- PHASE 1 -->
     <td>
-      <a href="">Registration page first test report</a></br>
+      <a href="tests/Registration_page_first_test.md">Registration page first test report</a></br>
       Fixing input errors, SQL injection, Path traversal, Application error disclosure, User agent fuzzer</br>
       <a href="">Registration page second test report</a>
     </td>
