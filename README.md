@@ -131,6 +131,9 @@ You can also find below the Logbook.
   </tr>
   <tr>
   <!-- PHASE 3 -->
+  <td>
+  <a href="tests/Phase_3_report.md">Phase 3 report</a></br>
+  </td>
   </tr>
   <tr>
   <!-- PHASE 4 -->
