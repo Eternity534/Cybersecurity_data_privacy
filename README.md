@@ -79,7 +79,7 @@ You can also find below the Logbook.
     --------------------</br>
     04.12.2024 Update project with new codes - 1h</br>
     04.12.2024 The booking project phase 3 done - 1h</br>
-    12.12.2024 Working again on the phase 3 for fixing bugs - 4h</br>
+    11.12.2024 Working again on the phase 3 for fixing bugs - 4h</br>
     13.12.2024 The booking project phase 3 done - 1h</br>
     </td>
   </tr>
@@ -93,6 +93,9 @@ You can also find below the Logbook.
     02.12.2024 Class : The project continues phase 4 - 2h</br>
     04.12.2024 Workshop : Anti-tampering and regulations GDPR - 2h</br>
     --------------------</br>
+    13.12.2024 The booking project phase 4 step 1 - 2h</br>
+    14.12.2024 The booking project phase 4 step 2 - 2h</br>
+    14.12.2024 The booking project phase 4 step 3 - 2h</br>
     </td>
   </tr>
   <tr>
