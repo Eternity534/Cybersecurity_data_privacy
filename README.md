@@ -79,7 +79,7 @@ You can also find below the Logbook.
     --------------------</br>
     04.12.2024 Update project with new codes - 1h</br>
     04.12.2024 The booking project phase 3 done - 1h</br>
-    12.12.2024 Working again on the phase 3 for fixing bugs - 2h</br>
+    12.12.2024 Working again on the phase 3 for fixing bugs - 4h</br>
     </td>
   </tr>
   <tr>
