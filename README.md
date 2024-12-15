@@ -62,7 +62,7 @@ You can also find below the Logbook.
     21.11.2024 Workshop : Authentication, Logging, Security testing, Shielding- 2h</br>
     --------------------</br>
     30.11.2024 The booking project phase 2 step 1 done - 2h</br>
-    30.11.2024 Update CSS for the registration page</br>
+    30.11.2024 Update CSS for the registration page - 30min</br>
     01.12.2024 The booking project phase 2 step 2 done - 2h</br>
     01.12.2024 The booking project phase 2 step 3 done - 2h</br>
     </td>
@@ -107,7 +107,7 @@ You can also find below the Logbook.
     <td>
     11.12.2024 Class : Finishing the project - 2h</br>
     --------------------</br>
-    12.12.2024 Doing 9 other Portswigger Labs - 2h</br>
+    12.12.2024 Doing 9 other Portswigger Labs - 3h</br>
     12.12.2024 Updating logbook style - 2h</br>
     10.12.2024-15.12.2024 The booking project final phase - 5h</br>
     </td>
