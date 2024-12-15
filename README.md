@@ -46,8 +46,8 @@ You can also find below the Logbook.
     13.11.2024 Workshop : Security testing, Shielding, Threat detection, Tokenization - 2h</br>
     --------------------</br>
     17.11.2024 Fixing problems with git commit and push for the new booking project - 1h</br>
-    18.11.2024 The booking project phase 1 step 1 done - 1h</br>
-    18.11.2024 The booking project phase 1 step 2 done - 1h</br>
+    18.11.2024 The booking project phase 1 step 1 done - 2h</br>
+    18.11.2024 The booking project phase 1 step 2 done - 2h</br>
     23.11.2024 The booking project phase 1 step 3 done - 3h</br>
     </td>
   </tr>
@@ -61,7 +61,7 @@ You can also find below the Logbook.
     18.11.2024 Class : The project continues phase 2 - 2h</br>
     21.11.2024 Workshop : Authentication, Logging, Security testing, Shielding- 2h</br>
     --------------------</br>
-    30.11.2024 The booking project phase 2 step 1 done - 1h</br>
+    30.11.2024 The booking project phase 2 step 1 done - 2h</br>
     30.11.2024 Update CSS for the registration page</br>
     01.12.2024 The booking project phase 2 step 2 done - 2h</br>
     01.12.2024 The booking project phase 2 step 3 done - 2h</br>
@@ -78,9 +78,9 @@ You can also find below the Logbook.
     26.11.2024 Workshop : Authorization, Logging, Security testing, Shielding, GDPR - 2h</br>
     --------------------</br>
     04.12.2024 Update project with new codes - 1h</br>
-    04.12.2024 The booking project phase 3 done - 1h</br>
+    04.12.2024 The booking project phase 3 done - 2h</br>
     11.12.2024 Working again on the phase 3 for fixing bugs - 4h</br>
-    13.12.2024 The booking project phase 3 done - 1h</br>
+    13.12.2024 The booking project phase 3 done - 2h</br>
     </td>
   </tr>
   <tr>
@@ -109,6 +109,7 @@ You can also find below the Logbook.
     --------------------</br>
     12.12.2024 Doing 9 other Portswigger Labs - 2h</br>
     12.12.2024 Updating logbook style - 2h</br>
+    10.12.2024-15.12.2024 The booking project final phase - 5h</br>
     </td>
   </tr>
 </table>
